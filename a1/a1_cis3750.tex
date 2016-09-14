@@ -1,0 +1,85 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+
+% Package for double spacing
+\usepackage{setspace}
+
+% Set 1.0 inch margins
+\usepackage[margin=1.0in, headheight=15pt]{geometry}
+
+\usepackage[T1]{fontenc}
+
+% Use images and graphics
+\usepackage{graphicx}
+\usepackage{float}
+
+% Use nicer headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\rhead{CIS3750 - Assignment 1}
+
+\doublespacing
+
+\title{Assignment 1}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vspace*{\baselineskip}
+    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+    \rule{\textwidth}{0.4pt}\\[1.5\baselineskip]
+    {\LARGE \textsc{Some Assignment Title}}\\[\baselineskip]
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{4pt}    
+    \rule{\textwidth}{2pt}\\[2\baselineskip]
+   
+    \vspace*{7\baselineskip}
+    \textsc{by}\\[0.25\baselineskip]
+    
+    % List of authors in alphabetical order (by last name)
+    {\scshape FIRST EDITOR \\ SECOND EDITOR \\ THIRD EDITOR \\ FOURTH EDITOR \\ FIFTH EDITOR \par}
+    \vfill
+    {\scshape Fall 2016} \\   
+  \end{titlepage}
+  
+  
+% Table of Contents (no page numbers on contents)
+\pagenumbering{gobble}
+\tableofcontents
+\lhead{} % remove default header from Contents page
+\clearpage
+\pagenumbering{roman} %pagenumbering roman numerals
+    
+\section{The First Section}
+1 inch margins (left, right, top, and bottom). In the upper right
+hand corner of each page of your submission (except the title page), you must
+include the course code and the assignment number (i.e. CIS3750 Assignment
+1. You must use 12 point font for regular text. You must include a title page.
+The title page must include the name of your group, as well as the names of
+the members of your group (first name first, last name last) listed alphabetically
+by last name. Note: Assignment 1 is not a sufficient title. You must number
+each page except for the title page. The table of contents must be numbered
+with lower case roman numerals beginning with i. The body of your document
+must be numbered starting with 1. Page numbering must appear at the bottom
+centre of each page (for those pages which are numbered). Your submission
+must be single sided. Your submission must be double spaced
+
+
+\subsection{First subsection}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non congue mauris. Praesent lorem orci, ultrices ac rutrum consequat, ornare at magna. Maecenas at felis ac sapien tincidunt commodo ut at neque. Nam a ipsum ornare, varius mi ornare, finibus tortor. In rhoncus bibendum erat nec ultrices. Sed sodales eu est vitae rutrum. Sed scelerisque metus a magna consectetur bibendum. Nunc a est sed massa malesuada lacinia eu ac augue. Duis viverra molestie pellentesque. Praesent a posuere sem. Fusce nec gravida augue, et malesuada leo. Quisque ultricies id ligula id pulvinar. Cras in iaculis felis, ac maximus massa. Quisque et justo eu nulla dapibus cursus.
+
+\subsection{Second Subsection}
+Quisque enim massa, hendrerit id malesuada ac, semper non ante. Morbi malesuada nulla sapien. Donec et odio nec ligula semper tincidunt. Sed ultricies, ipsum vitae elementum ullamcorper, nunc mi pretium nibh, at volutpat erat arcu ut lorem. Suspendisse erat eros, tempor eget dapibus sit amet, pharetra vel ante. Aenean at ante nec tellus tincidunt accumsan. Donec viverra erat odio, eu ultricies lacus finibus eu.
+
+\section{The Second Section}
+\begin{figure}[H]
+	\centering	
+	\includegraphics[width=\linewidth]{img/placekitten_600x300.jpg}
+	\caption{A placeholder kitten}
+	\label{fig:kitten}
+\end{figure}
+Cras mollis semper nibh, a venenatis est iaculis condimentum. Ut at laoreet dui, sed imperdiet massa. Donec at sagittis augue. Curabitur a malesuada velit. Aliquam libero mi, vulputate id viverra at, luctus a nisi. Proin vestibulum elementum efficitur. Nulla et iaculis diam. Sed sit amet metus quis turpis blandit blandit. Proin diam ipsum, sagittis ac iaculis non, auctor eu ante.
+
+Proin consectetur blandit accumsan. Vivamus sodales vitae ipsum sit amet gravida. Phasellus aliquam turpis a purus scelerisque auctor. Curabitur vulputate dictum pretium. Sed fermentum sem nec porta aliquam. Nam pulvinar erat eu turpis congue blandit. Aliquam sed felis ut magna posuere scelerisque. Ut vitae nunc eros. Donec purus velit, dapibus non urna non, gravida luctus mi. Aenean gravida urna vel libero semper, non volutpat risus pharetra. Mauris semper nibh ex, id pellentesque nibh malesuada et. Maecenas placerat lorem in felis venenatis lobortis. Vivamus suscipit sed metus et laoreet. Maecenas at lacus in est sagittis sagittis. Praesent eget dapibus ipsum. Phasellus hendrerit sit amet quam vel aliquam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non congue mauris. Praesent lorem orci, ultrices ac rutrum consequat, ornare at magna. Maecenas at felis ac sapien tincidunt commodo ut at neque. Nam a ipsum ornare, varius mi ornare, finibus tortor. In rhoncus bibendum erat nec ultrices. Sed sodales eu est vitae rutrum. Sed scelerisque metus a magna consectetur bibendum. Nunc a est sed massa malesuada lacinia eu ac augue. Duis viverra molestie pellentesque. Praesent a posuere sem. Fusce nec gravida augue, et malesuada leo. Quisque ultricies id ligula id pulvinar. Cras in iaculis felis, ac maximus massa. Quisque et justo eu nulla dapibus cursus.
+
+\end{document}

@@ -1,1 +1,3 @@
-#CIS3750\nAssignment 1 latex template
+#CIS3750
+
+Assignment 1 latex template

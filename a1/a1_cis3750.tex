@@ -1,5 +1,13 @@
 \documentclass[12pt,letterpaper]{article}
 \usepackage[utf8]{inputenc}
+\usepackage{kpfonts}
+\usepackage[T1]{fontenc}
+
+\usepackage{titlesec}
+
+\titlespacing*\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing*\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing*\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
 % Package for double spacing
 \usepackage{setspace}
@@ -7,11 +15,14 @@
 % Set 1.0 inch margins
 \usepackage[margin=1.0in, headheight=15pt]{geometry}
 
-\usepackage[T1]{fontenc}
+
 
 % Use images and graphics
 \usepackage{graphicx}
 \usepackage{float}
+
+% no item indent
+\usepackage{enumitem}
 
 % Use nicer headers
 \usepackage{fancyhdr}
@@ -29,57 +40,121 @@
     \vspace*{\baselineskip}
     \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
     \rule{\textwidth}{0.4pt}\\[1.5\baselineskip]
-    {\LARGE \textsc{Some Assignment Title}}\\[\baselineskip]
+    {\LARGE \textsc{ARET Food Security System}}\\[\baselineskip]
 	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{4pt}    
     \rule{\textwidth}{2pt}\\[2\baselineskip]
    
-    \vspace*{7\baselineskip}
+    \vspace*{5\baselineskip}
     \textsc{by}\\[0.25\baselineskip]
+    {\LARGE HANLON} \\
     
+    \vspace*{\baselineskip}
     % List of authors in alphabetical order (by last name)
-    {\scshape FIRST EDITOR \\ SECOND EDITOR \\ THIRD EDITOR \\ FOURTH EDITOR \\ FIFTH EDITOR \par}
+    {\textsc{David DiMaria \\ Braydon Johnson \\ Joshua Lemieux \\ Neivin Mathew \\ Like Zheng} \par}
     \vfill
     {\scshape Fall 2016} \\   
   \end{titlepage}
   
   
 % Table of Contents (no page numbers on contents)
-\pagenumbering{gobble}
+\pagenumbering{roman} %roman numerals for ToC
 \tableofcontents
 \lhead{} % remove default header from Contents page
 \clearpage
-\pagenumbering{roman} %pagenumbering roman numerals
+\pagenumbering{arabic} %pagenumbering in arabic numbers
     
-\section{The First Section}
-1 inch margins (left, right, top, and bottom). In the upper right
-hand corner of each page of your submission (except the title page), you must
-include the course code and the assignment number (i.e. CIS3750 Assignment
-1. You must use 12 point font for regular text. You must include a title page.
-The title page must include the name of your group, as well as the names of
-the members of your group (first name first, last name last) listed alphabetically
-by last name. Note: Assignment 1 is not a sufficient title. You must number
-each page except for the title page. The table of contents must be numbered
-with lower case roman numerals beginning with i. The body of your document
-must be numbered starting with 1. Page numbering must appear at the bottom
-centre of each page (for those pages which are numbered). Your submission
-must be single sided. Your submission must be double spaced
+\section{Client Details}
+Malawi is a country located in the warm heart of Africa, with a population of 16.4 million. Last year, there were 1 million people in Malawi facing a problem known as food insecurity. This year, that number will rise to 6.4 million. The economy of the country is based on agriculture. Most of the people in Malawi are farmers who grow tobacco for living. Due to the impact of climate change and the growing lack of food, the farmers need to transition to growing different crops. The problem is that many of the Malawians have never grown anything besides tobacco, and do not contain the knowledge to start growing other crops. This is the issue that ARET are trying to solve. \par
 
+ARET (Agricultural Research and Extension Trust) is a research organization in Malawi. They are Malawi’s premier research institution, which are  responsible for conducting research and providing technical/extension services on tobacco. The Trust was established on September 1st, 1995 to foster development and information dissemination for Malawi’s tobacco industry. It amalgamated the services of two institutions, Tobacco Research Institute of Malawi (TRIM) and the Estate Extension Service Trust (EEST), who separately provided research and extension services respectively (reference 1). \par
 
-\subsection{First subsection}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non congue mauris. Praesent lorem orci, ultrices ac rutrum consequat, ornare at magna. Maecenas at felis ac sapien tincidunt commodo ut at neque. Nam a ipsum ornare, varius mi ornare, finibus tortor. In rhoncus bibendum erat nec ultrices. Sed sodales eu est vitae rutrum. Sed scelerisque metus a magna consectetur bibendum. Nunc a est sed massa malesuada lacinia eu ac augue. Duis viverra molestie pellentesque. Praesent a posuere sem. Fusce nec gravida augue, et malesuada leo. Quisque ultricies id ligula id pulvinar. Cras in iaculis felis, ac maximus massa. Quisque et justo eu nulla dapibus cursus.
+ARET states their vision as “To be a leading regional centre of excellence in agricultural research and technology dissemination which promotes diversification in the agricultural sector.” (ARET Strategic Plan 2016-2021). 
 
-\subsection{Second Subsection}
-Quisque enim massa, hendrerit id malesuada ac, semper non ante. Morbi malesuada nulla sapien. Donec et odio nec ligula semper tincidunt. Sed ultricies, ipsum vitae elementum ullamcorper, nunc mi pretium nibh, at volutpat erat arcu ut lorem. Suspendisse erat eros, tempor eget dapibus sit amet, pharetra vel ante. Aenean at ante nec tellus tincidunt accumsan. Donec viverra erat odio, eu ultricies lacus finibus eu.
-
-\section{The Second Section}
+\section{Team Details}
 \begin{figure}[H]
 	\centering	
-	\includegraphics[width=\linewidth]{img/placekitten_600x300.jpg}
-	\caption{A placeholder kitten}
+	\includegraphics[height=2in]{img/hanlon-logo.png}
+	%\caption{The Company Logo}
 	\label{fig:kitten}
 \end{figure}
-Cras mollis semper nibh, a venenatis est iaculis condimentum. Ut at laoreet dui, sed imperdiet massa. Donec at sagittis augue. Curabitur a malesuada velit. Aliquam libero mi, vulputate id viverra at, luctus a nisi. Proin vestibulum elementum efficitur. Nulla et iaculis diam. Sed sit amet metus quis turpis blandit blandit. Proin diam ipsum, sagittis ac iaculis non, auctor eu ante.
 
-Proin consectetur blandit accumsan. Vivamus sodales vitae ipsum sit amet gravida. Phasellus aliquam turpis a purus scelerisque auctor. Curabitur vulputate dictum pretium. Sed fermentum sem nec porta aliquam. Nam pulvinar erat eu turpis congue blandit. Aliquam sed felis ut magna posuere scelerisque. Ut vitae nunc eros. Donec purus velit, dapibus non urna non, gravida luctus mi. Aenean gravida urna vel libero semper, non volutpat risus pharetra. Mauris semper nibh ex, id pellentesque nibh malesuada et. Maecenas placerat lorem in felis venenatis lobortis. Vivamus suscipit sed metus et laoreet. Maecenas at lacus in est sagittis sagittis. Praesent eget dapibus ipsum. Phasellus hendrerit sit amet quam vel aliquam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non congue mauris. Praesent lorem orci, ultrices ac rutrum consequat, ornare at magna. Maecenas at felis ac sapien tincidunt commodo ut at neque. Nam a ipsum ornare, varius mi ornare, finibus tortor. In rhoncus bibendum erat nec ultrices. Sed sodales eu est vitae rutrum. Sed scelerisque metus a magna consectetur bibendum. Nunc a est sed massa malesuada lacinia eu ac augue. Duis viverra molestie pellentesque. Praesent a posuere sem. Fusce nec gravida augue, et malesuada leo. Quisque ultricies id ligula id pulvinar. Cras in iaculis felis, ac maximus massa. Quisque et justo eu nulla dapibus cursus.
+\subsection{Team Members}
+Hanlon is comprised of the following students:\\
+1. \textbf{\hspace*{5pt} David DiMaria} - Project Manager\\
+2. \textbf{\hspace*{5pt}Braydon Johnson} - Software Developer, User Interface Designer\\
+3. \textbf{\hspace*{5pt}Joshua Lemieux} - Project Manager, User Interface Designer\\
+4. \textbf{\hspace*{5pt}Neivin Mathew} - Software Developer, User Interface Designer\\
+5. \textbf{\hspace*{5pt}Like Zheng} - Software Developer
+
+\subsection{Team Roles}
+\subsubsection*{Project Manager}
+The Project Manager predicts potential problems that may arise during development, and plans tasks to ensure that the project is completed successfully and on time. This role involves the scheduling and unblocking of tasks. It may also involve some programming.
+
+\subsubsection*{Developer}
+The Developer is involved in all aspects of the software development process including research, design, coding, documentation and testing.
+
+\subsubsection*{User Interface Designer}
+The User Interface (UI) Designer role is to plan out and develop any user facing component of the system which includes the specific layout of screens, and improving the interaction between the customer and the product.
+
+\subsection{Team Organization}
+Hanlon will follow a static team structure. Each member will maintain their respective roles for the entire duration of the project. \par
+
+Hanlon will use a democratic majority voting system for any decisions that need to be taken within the team. Each present member will be involved in voting, and possesses one vote per motion. A motion is passed when a simple majority is achieved. \par
+
+In the event of a team member being unavailable, and a majority cannot be established, a motion can only be passed through unanimous consent.
+
+\clearpage
+\section{Project Goals and Users}
+\subsection{Project Goals}
+
+The goal of the project is to design and develop a system that allows the Agricultural Research and Extension Trust (ARET) of Malawi to provide agricultural information to the farmers of Malawi, and relay the data collected from the system back to ARET and its partners.
+
+The project will involve designing and developing a mobile and web platform that aids in the dissemination of information to the farmers of Malawi. The mobile application will aim to have a minimal network footprint. \par
+
+It will also include the development of a database and Application Programming Interface (API) for the mobile and web platform to communicate with. \par
+
+In addition, the platform will also collect and aggregate data and usage metrics from its users for use by ARET.
+
+\subsection{Users}
+\subsubsection*{System Administrator}
+The System Administrator is a member of ARET responsible for managing user accounts, maintaining the database and monitoring the usage of the Application Programming Interface (API). They are in close communication with the development team, and report structural changes the database and API.
+
+\subsubsection*{Researcher}
+A Researcher is a member of ARET responsible for creating and managing research projects within the system. Additionally, they will review the materials created by the Extension Service to ensure that they accurately convey research findings.
+
+\subsubsection*{Extension Service}
+The Extension Service is the part of ARET responsible for using the results from the research projects to create resources that can be easily accessed by the farmers of Malawi.
+
+\subsubsection*{Extension Officer}
+An Extension Officer is a member of ARET responsible for communicating with the Extension Service through the system and distributing relevant extension materials to their respective Agents. They are also responsible for collecting and validating data from the Farmers and Extension Agents.
+
+\subsubsection*{Extension Agent}
+An Extension Agent is a member of ARET responsible for communicating with their Extension Officer within the system and distributing relevant extension materials to the Farmers within their assigned region. They are also responsible for collecting data from the Farmer.
+
+\subsubsection*{Farmer}
+A Farmer is a citizen of Malawi involved in agriculture. They are the primary users of the mobile application, which will allow them to track their farm statistics, receive notifications from ARET, respond to ARET sanctioned surveys, and report incidents to ARET.
+
+\subsubsection*{Partner}
+A Partner is any organization or entity working closely with ARET. This includes, but is not limited to, agencies such as the Farm Radio Trust, mHub, the African Forum for Agricultural Advisory Services (AFAAS), Left, the University of Guelph, etc.
+
+\subsubsection*{Public}
+The Public is anyone who is using the web application but is not one of the defined users. This includes potential donors, non Malawians, other Malawian citizens, etc.
+
+\subsubsection*{System}
+The System refers to the entire software platform including the web portal, mobile application, data collection platform, the farmer crop management database and API.
+
+
+\clearpage
+\section{Individual Contributions}
+\clearpage
+\subsection*{David DiMaria}
+\textbf{Collaboration is the New Competitive Advantage}
+
+After reading the articles provided, there was a lot to think about in regards to how I am going to use my degree after I graduate. Obviously I’d like to be employed by a software company, and make good money. However, I hadn’t given much thought to where I would want to work within computer science, and whether or not it was important that I’m passionate about what I’m working on professionally. If I could use my skills towards some world challenge, it would be the right to knowledge, and specifically the right to free internet. To elaborate on that, I grew up in the age where by the time I was able to type, search engines were extremely popular and any information that I wanted was right at my fingertips. I could know anything at any moment, uncensored, as long as I had a stable internet connection. I could learn about anything I want, immerse myself in online communities, share information with my peers and find like minded individuals from all around the world.\par
+
+This is a challenge since a large portion of the world doesn’t have internet access, and many that do have portions censored based on which country they're from. This is something that people should care about because if impoverished people can learn anything at any moment, they could be saved from governments trying to suppress them physically and intellectually. The reason why governments will try and censor things is because of the amount of political unrest it would cause given there people had all the information. The power that information could have on a population is unfathomable, because they could learn the truth about how their government is perceived in the eyes of the rest of the world.\par
+
+If I could choose a group of people to help me achieve this goal, it would be Google, Facebook, and telecommunications companies. The power of internet infrastructure at companies like Google and Facebook is large enough that they could develop a worldwide satellite network with telecommunications companies that delivers internet to everyone.
+
 
 \end{document}

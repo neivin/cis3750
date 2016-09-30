@@ -40,19 +40,19 @@
     \vspace*{\baselineskip}
     \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
     \rule{\textwidth}{0.4pt}\\[1.5\baselineskip]
-    {\LARGE \textsc{ARET Food Security System}}\\[\baselineskip]
+    {\LARGE \textsc{An Initial Outline of a Software System to Improve Food Security in Malawi}}\\[\baselineskip]
 	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{4pt}    
     \rule{\textwidth}{2pt}\\[2\baselineskip]
    
     \vspace*{5\baselineskip}
-    \textsc{by}\\[0.25\baselineskip]
+    \textsc{BY}\\[0.25\baselineskip]
     {\LARGE HANLON} \\
     
     \vspace*{\baselineskip}
     % List of authors in alphabetical order (by last name)
     {\textsc{David DiMaria \\ Braydon Johnson \\ Joshua Lemieux \\ Neivin Mathew \\ Like Zheng} \par}
     \vfill
-    {\scshape Fall 2016} \\   
+    {\scshape September 30, 2016} \\
   \end{titlepage}
   
   
@@ -70,11 +70,16 @@ ARET (Agricultural Research and Extension Trust) is a research organization in M
 
 ARET states their vision as “To be a leading regional centre of excellence in agricultural research and technology dissemination which promotes diversification in the agricultural sector.” (ARET Strategic Plan 2016-2021). 
 
+\clearpage
 \section{Team Details}
+\subsection{Team Name and Logo}
+The team name for the project is "Hanlon."\par
+The name is inspired by the eponymous highway that runs through the city of Guelph, and signifies the team's ties to the University of Guelph, as well as the city of Guelph.\\
+
 \begin{figure}[H]
 	\centering	
 	\includegraphics[height=2in]{img/hanlon-logo.png}
-	%\caption{The Company Logo}
+	%\caption{The team logo}
 	\label{fig:kitten}
 \end{figure}
 
@@ -124,37 +129,29 @@ The goal of the project is to design and develop a system that allows the Agricu
 Version control of the codebase will be done using Git. Trello will be used to keep track of sprints and other project management tasks. Communication within the team and between teams will be accomplished through Slack.\par
 The database will be built with SQL, using MySQL or PostgreSQL. The API would be developed in Python on the Django REST Framework. The web portal and mobile application will be built concurrently using HTML5, CSS3, and JavaScript, while relying on the Adobe PhoneGap framework to create a hybrid platform.
 
+\clearpage
+\section{Requirements}
+\subsection{Definitions}
+The terms used in the requirements document are defined as follows:\\
+1. \hspace*{5pt} \textbf{ARET -- } The Agricultural Research and Extension Trust of Malawi. \\
+2. \hspace*{5pt} \textbf{SMS -- } Short Message Service. A service on cell phones that allows the exchange of short text messages.\\
+3. \hspace*{5pt} \textbf{API -- } Application Programming Interface. A set of tools that allows applications to interact with each other.\\
+4. \hspace*{5pt} \textbf{SQL -- } Structured Query Language. A language that allows the definition and manipulation of data.\\
+5. \hspace*{5pt} \textbf{GUI -- } Graphical User Interface. A visual framework that enables easy interaction with an application.
 
-\subsubsection*{System Administrator}
-The System Administrator is a member of ARET responsible for managing user accounts, maintaining the database and monitoring the usage of the Application Programming Interface (API). They are in close communication with the development team, and report structural changes the database and API.
-
-\subsubsection*{Researcher}
-A Researcher is a member of ARET responsible for creating and managing research projects within the system. Additionally, they will review the materials created by the Extension Service to ensure that they accurately convey research findings.
-
-\subsubsection*{Extension Service}
-The Extension Service is the part of ARET responsible for using the results from the research projects to create resources that can be easily accessed by the farmers of Malawi.
-
-\subsubsection*{Extension Officer}
-An Extension Officer is a member of ARET responsible for communicating with the Extension Service through the system and distributing relevant extension materials to their respective Agents. They are also responsible for collecting and validating data from the Farmers and Extension Agents.
-
-\subsubsection*{Extension Agent}
-An Extension Agent is a member of ARET responsible for communicating with their Extension Officer within the system and distributing relevant extension materials to the Farmers within their assigned region. They are also responsible for collecting data from the Farmer.
-
-\subsubsection*{Farmer}
-A Farmer is a citizen of Malawi involved in agriculture. They are the primary users of the mobile application, which will allow them to track their farm statistics, receive notifications from ARET, respond to ARET sanctioned surveys, and report incidents to ARET.
-
-\subsubsection*{Partner}
-A Partner is any organization or entity working closely with ARET. This includes, but is not limited to, agencies such as the Farm Radio Trust, mHub, the African Forum for Agricultural Advisory Services (AFAAS), Left, the University of Guelph, etc.
-
-\subsubsection*{Public}
-The Public is anyone who is using the web application but is not one of the defined users. This includes potential donors, non Malawians, other Malawian citizens, etc.
-
-\subsubsection*{System}
-The System refers to the entire software platform including the web portal, mobile application, data collection platform, the farmer crop management database and API.
-
+\subsection{Requirements Table}
+The table of requirements can be found as a .csv file attached to the report.
 
 \clearpage
 \section{Individual Contributions}
+\subsection{Josh Lemieux}
+\textbf{Collaboration is the New Competitive Advantage}\par
+I’m going to be honest, after reading the articles provided and actually thinking about an answer to the question, I could not think of a single thing that I was passionate about that would truly help people. It was honestly a little bit of a shocker. It’s not that there was nothing I was passionate about, there would be plenty of technologies I would love to work on and companies I would love to work for. But none of them were really solving important issues, and that was a little depressing. So I decided to analyze my life and some of the things I may take for granted. I realized something in that second, I was sitting in a Starbucks drinking a ridiculously overpriced fancy latte. I thought\... here I am drinking a \$5 drink when millions of people in developing countries are just wishing for a little bit of fresh water.\par
+So I wondered how much water could be bought with just \$5? I came across this article Here \par
+Wow, less than \$5 per million liters of water removed. So, for the price of my one \$5 latte, Nestle could give a liter of fresh water to a million people. That is simply astonishing. I don’t think I really need to explain how important it is to have fresh water, but if you’re up for a challenge just avoid drinking anything for a full twenty four hours, you will soon realize how bad being dehydrated can be. \par
+Now what would I do if I had practically infinite funds? I would simply buy a few companies like Nestle and stop worrying about having the perfect profit margins and start worrying about my fellow mankind. The most depressing part is, even with the changes I would make the company would likely still be profitable. So why not now?
+
+
 \clearpage
 \subsection{David DiMaria}
 \textbf{Collaboration is the New Competitive Advantage}
@@ -164,6 +161,5 @@ After reading the articles provided, there was a lot to think about in regards t
 This is a challenge since a large portion of the world doesn’t have internet access, and many that do have portions censored based on which country they're from. This is something that people should care about because if impoverished people can learn anything at any moment, they could be saved from governments trying to suppress them physically and intellectually. The reason why governments will try and censor things is because of the amount of political unrest it would cause given there people had all the information. The power that information could have on a population is unfathomable, because they could learn the truth about how their government is perceived in the eyes of the rest of the world.\par
 
 If I could choose a group of people to help me achieve this goal, it would be Google, Facebook, and telecommunications companies. The power of internet infrastructure at companies like Google and Facebook is large enough that they could develop a worldwide satellite network with telecommunications companies that delivers internet to everyone.
-
 
 \end{document}

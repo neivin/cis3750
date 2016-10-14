@@ -1,0 +1,149 @@
+ID,User,Category,Requirement,Dependencies,Priority,TimeEstimate
+001,System,Must,The system must be compatible on iOS devices through the mobile app. (iOS version 7.0+),N/A,10,N/A
+002,System,Must,The system must be compatible on Android devices through the mobile app. (Android version 4.0+),N/A,10,N/A
+003,System,Must,The system must have a database schema that outlines all the information in the system.,N/A,10,0.5
+004,System,Must,The system must implement the database.,003,10,0.5
+005,System,Must,The system must be able to authenticate all users who have an account in the system.,004,10,2
+006,System,Must,The system must have an initial administrator account with provided credentials.,004,10,0.5
+007,System,Must,The system must have an API for the web portal and mobile app to interface with.,004,10,3
+008,System,Must,The system API must respond to requests within 30 seconds.,007,10,1
+009,Administrator,Must,The administrator must be able to login to an administrator account on the web portal.,006,10,0.5
+010,Administrator,Must,The administrator must be able to logout of an administrator account on the web portal.,009,10,0.5
+011,Administrator,Must,The administrator must be able to create all types of user accounts on the web portal.,009,10,1
+012,Administrator,Must,The administrator must be able to modify all types of user accounts on the web portal.,009,10,1
+013,System,Must,The system must allow for files to be uploaded on the web portal.,004,10,2
+014,System,Must,The system must allow for files to be downloaded on the web portal.,013,10,1
+015,System,Must,The system must allow for files to be deleted on the web portal.,013,10,1
+016,Researcher,Must,A researcher must be able to login to their account with credentials provided by the administrator on the web portal.,011,10,0.5
+017,Extension Group,Must,An extension group member must be able to login to their account with credentials provided by the administrator on the web portal.,011,10,0.5
+018,Extension Officer/Agent,Must,An extension officer/agent must be able to login to their account with credentials provided by the administrator on the web portal.,011,10,0.5
+019,Farmer,Must,A farmer must be able to create an account with credentials on the mobile app.,004,10,1
+020,Farmer,Must,A farmer must be able to login to their account using their credentials on the mobile app.,019,10,0.5
+021,Farmer,Must,A farmer must be able to logout of their account on the mobile app.,020,10,0.5
+022,Researcher,Must,A researcher must be able to logout of their account on the web portal.,016,10,0.5
+023,Extension Group,Must,An extension group member must be able to logout of their account on the web portal.,017,10,0.5
+024,Extension Officer/Agent,Must,An extension officer/agent must be able to logout of their account on the web portal.,018,10,0.5
+025,Extension Group,Must,An extension group member must be able to edit their credentials on the web portal.,017,10,1
+026,Researcher,Must,A researcher must be able to edit their credentials on the web portal.,016,10,1
+027,Researcher,Must,A researcher must be able to post a new file on the web portal,016,10,2
+028,Extension Group,Must,An extension group member must be able to download files on the web portal.,027,10,0.5
+029,Extension Group,Must,An extension group member must be able to post the extended research to be approved on the web portal.,017,10,1
+030,Researcher,Must,A researcher must be able to download the files created by the extension service on the web portal.,016,10,0.5
+031,Researcher,Must,A researcher must be able to upload a revised version of a file from the extension service for them to review on the web portal.,029,10,1
+032,Researcher,Must,A researcher must be able to approve the files created by the extension service on the web portal.,028,10,0.5
+033,Extension Group,Must,An extension group member must be able to check if research has been approved on the web portal.,032,10,0.5
+034,Extension Group,Must,An extension group member must be able to publish approved extended research through the web portal that is accessible to farmers on the mobile app.,033,10,1
+035,Researcher,Must,A researcher must be able to remove research data they have previously uploaded on the web portal.,016,10,0.5
+036,Farmer,Must,"A farmer must have access, using minimal data, to extended crop research on the mobile app.",034,10,1
+037,Farmer,Must,A farmer must be able to edit the identification data attached to their account on the mobile app.,018,10,0.5
+038,Farmer,Must,A farmer must be able to edit the demographic information of their account on the mobile app.,018,10,0.5
+039,Farmer,Must,A farmer must be able to edit the contact information of their account on the mobile app.,018,10,0.5
+040,Farmer,Must,A farmer must be able to edit the location attached to their account on the mobile app.,018,10,2
+041,Farmer,Must,A farmer must be able to edit the field size of their crop field in metres on the mobile app.,018,10,0.5
+042,Farmer,Must,A farmer must be able to edit their crop information on the mobile app.,018,10,0.5
+043,Farmer,Must,"A farmer must be able to look up information, on the mobile app, using minimal data, on specific crops from the research done by ARET.",036,10,0.5
+044,Extension Group,Must,An extension group member must be able to access the farmers' identification information on the web portal.,037,10,0.5
+045,Extension Group,Must,An extension group member must be able to access the farmers' demographic information on the web portal.,038,10,0.5
+046,Extension Group,Must,An extension group member must be able to access the farmers' contact information on the web portal.,039,10,0.5
+047,Extension Group,Must,An extension group member must be able to access the farmers' crop information on the web portal.,042,10,0.5
+048,Extension Group,Must,An extension group member must be able to access the field size of the farmers' crop field through the web portal.,041,10,0.5
+049,Extension Group,Must,An extension group member must be able to access the farmers' location information on the web portal.,040,10,0.5
+050,Extension Group,Must,An extension group member must be able to remove extended research data from the system on the web portal.,029,10,0.5
+051,Extension Officer/Agent,Must,An extension officer/agent must be able to edit their credentials on the web portal.,018,10,1
+052,Extension Officer/Agent,Must,An extension officer/agent must be able to edit the identification data attached to their account on the web portal.,018,10,1
+053,Extension Officer/Agent,Must,An extension officer/agent must be able to access the farmers' identification information on the web portal.,037,10,0.5
+054,Extension Officer/Agent,Must,An extension officer/agent must be able to access the farmers' demographic information on the web portal.,038,10,0.5
+055,Extension Officer/Agent,Must,An extension officer/agent must be able to access the farmers' contact information on the web portal.,039,10,0.5
+056,Extension Officer/Agent,Must,An extension officer/agent must be able to access the farmers' crop information on the web portal.,042,10,0.5
+057,Extension Officer/Agent,Must,An extension officer/agent must be able to access the farmers' field size information on the web portal.,041,10,0.5
+058,Extension Officer/Agent,Must,An extension officer/agent must be able to access the farmers' location information on the web portal.,040,10,0.5
+059,Administrator,Must,"The administrator must be able to delete any account (excluding the admin account), through the web portal.",009,20,1
+060,Administrator,Must,The administrator must be able to query the database directly on the web portal.,009,20,0.5
+061,Extension Group,Must,An extension group member must be able to edit the identification data attached to their account on the web portal.,017,20,1
+062,Extension Officer/Agent,Must,"An extension officer/agent must be able to report incidents to extension group (e.g. pests, severe weather, etc) through the web portal.",018,20,2.5
+063,Farmer,Must,A farmer must be able to recover their password through the mobile app.,020,20,1.5
+064,Extension Group,Must,An extension group member must be able to view a list of all registered farmers on the web portal.,019,20,1
+065,Administrator,Should,The administrator should be able to publish information about ARET on the home page through the web portal.,009,20,4
+066,Extension Group,Should,An extension group member should be able to filter the list of farmers by which crop they are currently growing on the web portal.,064,20,0.5
+067,Extension Group,Should,An extension group member should be able to send notifications to a subset of users through the web portal.,017,20,4
+068,Extension Group,Should,An extension group member should be able to filter who a notification is sent to by user type on the web portal.,067,20,0.5
+069,Extension Group,Should,An extension group member should be able to filter who a notification is sent to by location on the web portal.,067,20,0.5
+070,Extension Group,Should,An extension group member should be able to filter who a notification is sent to by crop on the web portal.,067,20,0.5
+071,Extension Group,Should,An extension group member should be able to filter the list of farmers based on farming techniques defined by the extended research on the web portal.,064,20,0.5
+072,Extension Group,Should,An extension group member should be able to filter the list of farmers based on type of land/soil on the web portal.,064,20,0.5
+073,Extension Group,Should,An extension group member should be able to filter the list of farmers based on crop yield on the web portal.,064,20,0.5
+074,Extension Group,Should,An extension group member should be able to filter the list of farmers based on field size on the web portal.,064,20,0.5
+075,Extension Group,Should,An extension group member should be able to send out surveys to a subset of the users through the web portal.,017,20,4
+076,Extension Group,Should,An extension group member should be able to filter who a survey is sent to by user type on the web portal.,075,20,0.5
+077,Extension Group,Should,An extension group member should be able to filter who a survey is sent to by location on the web portal.,075,20,0.5
+078,Extension Group,Should,An extension group member should be able to filter who a survey is sent to by crop on the web portal.,075,20,0.5
+079,Extension Officer/Agent,Should,An extension officer/agent should be able to view a list of all registered farmers on the web portal.,018,20,1
+080,Extension Officer/Agent,Should,An extension officer/agent should be able to filter the list of farmers by which crop they are currently growing on the web portal.,079,20,0.5
+081,Extension Officer/Agent,Should,An extension officer/agent should be able to filter the list of farmers based on farming techniques on the web portal.,079,20,0.5
+082,Extension Officer/Agent,Should,An extension officer/agent should be able to filter the list of farmers based on type of land/soil on the web portal.,079,20,0.5
+083,Extension Officer/Agent,Should,An extension officer/agent should be able to filter the list of farmers based on crop yield on the web portal.,079,20,0.5
+084,Extension Officer/Agent,Should,An extension officer/agent should be able to filter the list of farmers based on field size on the web portal.,079,20,0.5
+085,Extension Officer/Agent,Should,An extension officer/agent should be able to send notification to a subset of the users through the web portal.,018,20,4
+086,Extension Officer/Agent,Should,An extension officer/agent should be able to filter who a notification is sent to by user type on the web portal.,085,20,0.5
+087,Extension Officer/Agent,Should,An extension officer/agent should be able to filter who a notification is sent to by location on the web portal.,085,20,0.5
+088,Extension Officer/Agent,Should,An extension officer/agent should be able to filter who a notification is sent to by crop on the web portal.,085,20,0.5
+089,Extension Officer/Agent,Should,An extension officer/agent should be able to send out surveys to a subset of the users through the web portal.,018,20,4
+090,Extension Officer/Agent,Should,An extension officer/agent should be able to filter who a survey is sent to by user type on the web portal.,089,20,0.5
+091,Extension Officer/Agent,Should,An extension officer/agent should be able to filter who a survey is sent to by location on the web portal.,089,20,0.5
+092,Extension Officer/Agent,Should,An extension officer/agent should be able to filter who a survey is sent to by crop on the web portal.,089,20,0.5
+093,Farmer,Should,"A farmer should be able to receive notifications, using minimal data, from ARET through the mobile app.",085,20,2
+094,Farmer,Should,"A farmer should be able to get information, using minimal data, on new crops that may be good for their area on the mobile app.",034,20,1
+095,Farmer,Should,"A farmer should be able to receive surveys, on the mobile app, using minimal data, sent from the extension group.",089,20,2
+096,Farmer,Should,"A farmer should be able to respond to surveys, using the mobile app, using minimal data, sent from the extension group.",095,20,2
+097,Farmer,Should,"A farmer should be able to send to ARET their current crop yield amount through the mobile app, using minimal data.",042,30,3
+098,Farmer,Should,"A farmer should be able to send to ARET which farming techniques defined by the extended research that they used to produce their crop yield on the mobile app, using minimal data.",097,30,1
+099,Extension Group,Should,An extension group member should be able to sort the list of farmers based on crop yield on the web portal.,073,30,0.5
+100,Extension Group,Should,An extension group member should be able to sort the list of farmers by which crop they are currently growing on the web portal.,066,30,0.5
+101,Extension Group,Should,An extension group member should be able to sort the list of farmers based on field size on the web portal.,074,30,0.5
+102,Extension Officer/Agent,Should,An extension officer/agent should be able to sort the list of farmers by which crop they are currently growing on the web portal.,098,30,0.5
+103,Extension Officer/Agent,Should,An extension officer/agent should be able to sort the list of farmers based on farming techniques defined by the extended research on the web portal.,081,30,0.5
+104,Extension Officer/Agent,Should,An extension officer/agent should be able to sort the list of farmers based on type of land/soil on the web portal.,082,30,0.5
+105,Extension Officer/Agent,Should,An extension officer/agent should be able to sort the list of farmers based on crop yield on the web portal.,083,30,0.5
+106,Extension Officer/Agent,Should,An extension officer/agent should be able to sort the list of farmers based on field size on the web portal.,084,30,0.5
+107,Farmer,Should,A farmer should be able to view the size of files prior to downloading within the mobile app.,034,30,0.5
+108,Public,Should,The public should be able to view ARET's goals on a main landing page on the web portal.,065,30,0.5
+109,Public,Should,The public should have access to a page containing a summary of ARET's accomplishments on the web portal.,065,30,0.5
+110,System,Should,The system should warn the user of the mobile app when the app's data usage goes above a user defined limit.,N/A,30,1.5
+111,System,Should,The system should ensure that users credentials match security criteria.,026,30,1.5
+112,System,Should,The system should be able to generate new API keys.,007,30,1
+113,Administrator,Should,The administrator should be able to provide API keys to potential partners through the web portal.,112,40,0.5
+114,Administrator,Should,The administrator should be able to activate and deactivate API keys through the web portal.,113,40,0.5
+115,Extension Group,Should,An extension group member should be able to access contact information of extension officers and agents through the web portal.,012,40,0.5
+116,Extension Officer/Agent,Should,An extension officer/agent should be able to access contact information of extension officers and agents through the web portal.,012,40,0.5
+117,Farmer,Should,"A farmer should be able to view their farming history (crops, yield, etc) organized based on some criteria (year, crop, etc.) on the mobile app, using minimal data.",042,40,4
+118,Public,Should,The public should not be able to access the mobile application.,N/A,40,2
+119,Farmer,Should,A farmer should have the ability to manage multiple accounts from a single phone.,020,40,4
+120,Farmer,Could,"A farmer could be able to deliver feedback using the mobile app, using minimal data, to their extension agent.",020,40,3
+121,Farmer,Could,"A farmer could be able to deliver feedback using the mobile app, using minimal data, to their extension agent detailing the current weather.",020,40,1
+122,Farmer,Could,"A farmer could be able to deliver feedback using the mobile app, using minimal data, to their extension agent detailing their crop status.",020,40,1
+123,Farmer,Could,"A farmer could be able to deliver feedback using the mobile app, using minimal data, to their extension agent detailing what techniques have been working.",020,40,1
+124,Extension Officer/Agent,Could,"The extension officer/agent could be able to access feedback data sent from farmers, using the web portal.",120,40,3
+125,Extension Officer/Agent,Could,The extension officer/agent could be able to access feedback data sent from farmers regarding current weather through the web portal.,121,40,1
+126,Extension Officer/Agent,Could,The extension officer/agent could be able to access feedback data sent from farmers regarding their crop status using the web portal.,122,40,1
+127,Extension Officer/Agent,Could,The extension officer/agent could be able to access feedback data sent from farmers regarding what techniques have been working using the web portal.,123,40,1
+128,Public,Could,"The public could donate an amount of money, above a minimum amount specified by ARET, with a credit card securely on the web portal.",065,40,4
+129,Public,Could,The public could use a form to fill in their information to get a tax receipt when they are donating money on the web portal.,128,40,3
+130,Public,Could,The system could allow non-Malawians to connect to ARET through social media (Facebook and Twitter).,N/A,40,1
+131,System,Could,The system could have an optional tutorial for new users to learn how to use the mobile app.,020,40,4
+132,System,Could,The system could allow two way SMS communication between ARET and the farmers.,020,40,4
+133,Extension Group,Could,The extension group could be able to edit their extension documents from within the web portal.,027,50,4
+134,Farmer,Could,A farmer could delete their account based on his credentials on the mobile app.,019,50,0.5
+135,Farmer,Could,A farmer could be able to view information on the soil type of their land through the mobile app.,020,50,1
+136,Public,Could,The public could be informed of which new types of crops might become available to be sold next on the web portal.,097,50,1
+137,Public,Could,The public could be able to get information on where crops are growing well through the web portal.,097,50,3
+138,Public,Could,The public could be able to filter information on where crops are growing well by type of crop through the web portal.,097,50,3
+139,Public,Could,The public could subscribe to an email newsletter on the web portal.,N/A,50,1
+140,Public,Could,The public could unsubscribe to the email newsletter on the web portal.,139,50,0.5
+141,Public,Could,The public could be able to request an API key to access data.,004,50,1
+142,System,Could,The system could collect data within the mobile app regarding time viewing specific ARET's extended research files.,034,50,4
+143,System,Could,The system could collect data within the moblile app regarding the frequency of which features of the app are used.,007,50,4
+144,Public,Wont,The public won't see suggestions of where to invest in transportation routes on the web portal.,N/A,N/A,N/A
+145,All Users,Wont,All users won't be able to video chat through the mobile app or the web portal.,N/A,N/A,N/A
+146,All Users,Wont,All users won't be able to voice chat through the mobile app or the web portal.,N/A,N/A,N/A
+147,Farmer,Wont,The farmers won't be able to communicate with other farmers through the system.,N/A,N/A,N/A
+148,Farmer,Wont,The farmers won't be able to remove/delete any data collected from them.,N/A,N/A,N/A

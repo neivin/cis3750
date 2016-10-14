@@ -1,0 +1,205 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{kpfonts}
+\usepackage[T1]{fontenc}
+
+% custom titles
+\usepackage{titlesec}
+
+% fix broken title numbering with 2016 titlesec update
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
+\patchcmd{\ttlh@hang}{\noindent}{}{}{}
+\makeatother
+%%%
+
+\titlespacing*\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing*\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing*\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+% Package for double spacing
+\usepackage{setspace}
+\usepackage{ragged2e}
+
+% Set 1.0 inch margins
+\usepackage[margin=1.0in, headheight=15pt]{geometry}
+\usepackage{enumitem}
+
+% Use images and graphics
+\usepackage{graphicx}
+\usepackage{float}
+
+% Use nicer headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\rhead{CIS3750 - Assignment 1}
+
+% sections should be indexed with alphabets
+\renewcommand{\thesection}{\Alph{section}}
+
+%double spaced lines in the whole document
+\doublespacing
+
+\title{Assignment 1}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vspace*{\baselineskip}
+    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+    \rule{\textwidth}{0.4pt}\\[1.5\baselineskip]
+    {\LARGE \textsc{An Initial Outline of a Software System to Improve Food Security in Malawi}}\\[\baselineskip]
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{4pt}    
+    \rule{\textwidth}{2pt}\\[2\baselineskip]
+   
+    \vspace*{5\baselineskip}
+    \textsc{BY}\\[0.25\baselineskip]
+    {\LARGE HANLON} \\
+    
+    \vspace*{\baselineskip}
+    % List of authors in alphabetical order (by last name)
+    {\textsc{David DiMaria \\ Braydon Johnson \\ Joshua Lemieux \\ Neivin Mathew \\ Like Zheng} \par}
+    \vfill
+    {\scshape October 14, 2016} \\
+  \end{titlepage}
+  
+  
+% Table of Contents (no page numbers on contents)
+\pagenumbering{roman} %roman numerals for ToC
+\tableofcontents
+\lhead{} % remove default header from Contents page
+\clearpage
+\pagenumbering{arabic} %pagenumbering in arabic numbers
+    
+\section{Client Details}
+Malawi is a country located in the warm heart of Africa, with a population of 16.4 million. According to the Malawi Vulnerability Assessment Committee, an estimated 2.83 million people will experience acute food insecurity during the 2015/16 lean season. (World Food Programme, 2016) The economy of the country is based on agriculture. The majority of the people in Malawi are farmers who cultivate tobacco for living. Due to the impact of climate change, decline in global tobacco consumption and the scarcity of food in Malawi, the farmers need to transition to growing different crops. However, since Malawian farmers have been growing tobacco for many generations, the current farmers of the country lack the tools and knowledge required in order to start growing other crops. 
+
+The client for the project is the Agricultural Research and Extension Trust (ARET) of Malawi. They are the premier research institution of Malawi, and are responsible for conducting research and providing technical/extension services on tobacco. The trust was established on September 1, 1995 to foster development and information dissemination for Malawi's tobacco industry. It combined the services of two institutions, the Tobacco Research Institute of Malawi (TRIM) and the Estate Extension Service Trust (EEST), who separately provided research and extension services respectively. (ARET, 2016)
+
+ARET states their new vision is "to be a leading regional centre of excellence in agricultural research and technology dissemination which promotes diversification in the agricultural sector." (ARET, 2016). To accomplish this, they require a software system to collect data on the farmers in Malawi, and distribute research conducted within the organization to the farmers of the country. This project aims to fulfil this need.
+
+\clearpage
+\section{Team Details}
+\subsection{Team Name}
+The team name for the project is "Hanlon."\par
+The name is inspired by the eponymous highway that runs through the city of Guelph, and signifies the team's ties to the University of Guelph, as well as the city of Guelph.\\
+
+\begin{figure}[H]
+	\centering	
+	\includegraphics[height=2in]{img/hanlon-logo.png}
+	%\caption{The team logo}
+	\label{fig:kitten}
+\end{figure}
+
+\subsection{Team Members}
+Hanlon is comprised of the following students:\\
+1. \textbf{\hspace*{5pt} David DiMaria} - Project Manager\\
+2. \textbf{\hspace*{5pt}Braydon Johnson} - Software Developer, User Interface Designer\\
+3. \textbf{\hspace*{5pt}Joshua Lemieux} - Project Manager, User Interface Designer\\
+4. \textbf{\hspace*{5pt}Neivin Mathew} - Software Developer, User Interface Designer\\
+5. \textbf{\hspace*{5pt}Like Zheng} - Software Developer
+
+\subsection{Team Roles}
+\subsubsection*{Project Manager}
+The Project Manager predicts potential problems that may arise during development, and plans tasks to ensure that the project is completed successfully and on time. This role involves the scheduling and unblocking of tasks. It may also involve some programming.
+
+\subsubsection*{Software Developer}
+The Developer is involved in all aspects of the software development process including research, design, coding, documentation and testing.
+
+\subsubsection*{User Interface Designer}
+The User Interface (UI) Designer role is to plan out and develop any user facing component of the system which includes the specific layout of screens, and improving the interaction between the customer and the product.
+
+\subsection{Team Organization}
+Hanlon will follow a static team structure. Each member will maintain their respective roles for the entire duration of the project. \par
+
+Hanlon will use a democratic majority voting system for any decisions that need to be taken within the team. Each present member will be involved in voting, and possesses one vote per motion. A motion is passed when a simple majority is achieved. \par
+
+In the event of a team member being unavailable, and a majority cannot be established, a motion can only be passed through unanimous consent.
+
+\clearpage
+\section{Project Goals and Users}
+\subsection{Project Goals}
+
+The goal of the project is to design and develop a system that allows the Agricultural Research and Extension Trust (ARET) of Malawi to provide agricultural information to the farmers of Malawi, and relay the data collected from the system back to ARET and its partners.
+
+\subsection{Users}
+1.\hspace*{5pt} \textbf{System Administrator -- } Maintains database and API.\\
+2.\hspace*{5pt} \textbf{Researcher -- } Creates research materials and reviews extension materials. \\
+3.\hspace*{5pt} \textbf{Extension Service --} Creates resources for farmers from research materials. \\
+4.\hspace*{5pt} \textbf{Extension Officer -- } Acts as the liaison between the Researcher and Extension Agent \\
+5.\hspace*{5pt} \textbf{Extension Agent -- } Acts as the liaison between the Extension Officer and the Farmer. \\
+6.\hspace*{5pt} \textbf{Farmer -- } Views information resources , supplies farm data, and responds to surveys. \\
+7.\hspace*{5pt} \textbf{Public -- } Uses the system without a user account. Includes any individual that does not fit into the other user groups. \\
+8.\hspace*{5pt} \textbf{System -- } Consists of the entire platform (web, mobile), database, and API.
+
+\subsection{Project Organization}
+Version control of the codebase will be done using Git. Trello will be used to keep track of sprints and other project management tasks. Communication within the team and between teams will be accomplished through Slack.\par
+The database will be built with SQL, using MySQL or PostgreSQL. The API would be developed in Python on the Django REST Framework. The web portal and mobile application will be built concurrently using HTML5, CSS3, and JavaScript, while relying on the Adobe PhoneGap framework to create a hybrid platform.
+
+\clearpage
+\section{Requirements}
+\subsection{Definitions}
+The terms used in the requirements document are defined as follows:\\
+1. \hspace*{5pt} \textbf{ARET -- } The Agricultural Research and Extension Trust of Malawi. \\
+2. \hspace*{5pt} \textbf{SMS -- } Short Message Service. A service on cell phones that allows the exchange of short text messages.\\
+3. \hspace*{5pt} \textbf{API -- } Application Programming Interface. A set of tools that allows applications to interact with each other.\\
+4. \hspace*{5pt} \textbf{SQL -- } Structured Query Language. A language that allows the definition and manipulation of data.\\
+5. \hspace*{5pt} \textbf{GUI -- } Graphical User Interface. A visual framework that enables easy interaction with an application.
+
+\subsection{Multiple Dependencies}
+The following requirements have more than one dependency: \\
+1. \textbf{Requirement \#027 -} Depends on requirement \#016 and requirement \#013. \\
+2. \textbf{Requirement \#029 -} Depends on requirement \#017 and requirement \#013. \\
+3. \textbf{Requirement \#030 -} Depends on requirement \#016 and requirement \#014. \\
+4. \textbf{Requirement \#035 -} Depends on requirement \#016 and requirement \#015.
+
+\subsection{Requirements Table}
+The table of requirements can be found in the file named "\texttt{CIS3750\char`_A2\char`_Hanlon.csv}" file attached to the report.
+
+\clearpage
+\section{Individual Contributions}
+\subsection{Josh Lemieux}
+\textbf{For the Price of a Latte}\par
+
+
+\clearpage
+\subsection{David DiMaria}
+\textbf{Knowing is a Right}
+
+\clearpage
+\subsection{Like Zheng}
+\textbf{What is the Real Challenge?}\par
+
+
+\clearpage
+\subsection{Neivin Mathew}
+\textbf{The Advancement of Prosthetics}\par
+
+\clearpage
+\subsection{Braydon Johnson}
+\textbf{The Problem with Today's Education System}\par
+
+
+\clearpage
+\section{References}
+\begin{flushleft}
+\begin{itemize}[leftmargin=12pt]
+
+\item World Food Programme (2016). \emph{Malawi.}
+ Retrieved from \texttt{https://www.wfp.org/countries/malawi}
+
+\item Agricultural Research and Extension Trust of Malawi (2016). \emph{About ARET Malawi.}
+Retrieved from \texttt{http://www.aret.org.mw/index.php/about-us/profile}
+
+\item Agricultural Research and Extension Trust of Malawi (2016, January). \emph{ARET Strategic Plan 2016-2021.}
+
+
+\end{itemize}
+\end{flushleft}   
+
+
+
+\end{document}

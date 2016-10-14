@@ -141,7 +141,181 @@ The table of requirements can be found in the file named "\texttt{CIS3750\char`_
 
 \clearpage
 \section{Use Cases}
-\subsection{•}
+
+\subsection{Upload Research Document for Extension}
+\subsubsection*{Primary Actor:} ARET Researcher
+\subsubsection*{Stakeholders and Interests:}
+1. \emph{ARET Researcher --} wants to upload original research documents to be extended, wants the process to be clear and simple.\\[10pt]
+2. \emph{ARET Extension Group --} wants to download original research documents, , wants the process to be clear and simple.
+
+\subsubsection*{Preconditions:}
+The researcher is identified and authenticated by the system and has a file ready to be uploaded.
+
+\subsubsection*{Success Guarantee (Postconditions):}
+The Researcher successfully uploads a research file to the web portal for the Extension Group to access. List of research files to be extended is updated.
+
+\subsubsection*{Main Success Scenario:}
+1. The user indicates to the system that they want to upload a new file for extension.\\
+2. The system redirects the user to a page where they are prompted to choose a file from their device or exit the use case [Use case ends].\\
+3. The user selects a new file from their device to be uploaded and confirms that the file is correct. \emph{[Alt1: Incorrect file selected]}\\
+4. The system validates the selected file on certain criteria such as file format, file size, etc. \emph{[Alt2: file is not correct format][Alt3: file is over size limit]}\\
+5. The system uploads the file selected by the user to the system database. 
+
+
+\subsubsection*{Alternative Flows:}
+\emph{Alt1:Incorrect file selected}\\
+1. Flow resumes at Main Success Scenario Step 2. \\[10pt]
+\emph{Alt2: File is not in correct format}\\
+1. The system informs the user that the selected file is of an invalid file format. \\
+2. Flow resumes at Main Success Scenario Step 2. \\[10pt]
+\emph{Alt3: File exceeds size restriction}\\
+1. The system informs the user that the selected file exceeds the size restriction on uploaded files.\\
+2. Flow resumes at Main Success Scenario Step 2.
+
+
+\subsubsection*{Exceptions:}
+If at any time the system is unable to authenticate the user, or unable to upload the research document to the database due to failure of the system API or the user’s internet connection, the system informs the user of the problem and the use case ends.
+
+
+\clearpage
+\subsection{View Original Research Document for Extension}
+\subsubsection*{Primary Actor:} ARET Extension Group
+\subsubsection*{Stakeholders and Interests:}
+1. \emph{ARET Extension Group --} wants to download the research data to convert into extension materials, wants accurate research data to convert, wants the process to be clear and simple.\\[10pt]
+2. \emph{ARET Researcher --} wants the extension materials generated from the research to accurately convey the research data, wants to know how their research is being used. \\[10pt]
+3. \emph{Farmer --} wants the research data to be converted into extension materials, wants to apply the information from the research to their own farm.
+
+\subsubsection*{Preconditions:}
+Extension Group member is identified and authenticated by the system, research document exists in the system database.
+
+\subsubsection*{Success Guarantee (Postconditions):}
+The Extension Group member successfully downloads a research file from the web portal to their device. The research file data is updated to indicate that it is currently being worked on by the Extension Group.
+
+\subsubsection*{Main Success Scenario:}
+1. The user requests a list of research documents that are currently available for conversion to extension materials. \emph{[Alt1: No research documents available]}\\
+2. The system retrieves the list of research documents available and displays the list to the user.\\
+3. The system provides the user with the choice to select a document or to exit the use case. \emph{[Use case ends]}\\
+4. The user selects a research document they want to view.\\
+5. The system redirects the user to a page outlining the details of the document (File size, Author, Date of Last Update etc.) \\
+6. The user indicates to the system that they would like to either view the selected document, download it to their device \emph{[Alt2: Download research document]}, or select a different research document from the list \emph{[Alt3: Select different research document]}.\\ 
+7. The system fetches the document from the ARET database and displays it to the user through their browser.
+
+\subsubsection*{Alternative Flows:}
+\emph{Alt1: No research documents available}\\
+1. The system informs the user that no research documents are currently available for conversion to extension materials. Use case ends.\\[10pt]
+\emph{Alt2: Download research document}\\
+1. The system fetches the desired document from the ARET database and downloads the file to the default download directory on the mobile device. \\
+2. The system informs the user that the file has been successfully downloaded to the device. \\[10pt]
+\emph{Alt3: Select different research document}\\
+1. Flow resumes at Main Success Scenario Step 2.
+
+\subsubsection*{Exceptions:}
+If at any time the system is unable to authenticate users or retrieve research documents from the system database due to failure of the system API or the user’s internet connection, the system informs the user of the problem and the use case ends.
+
+\clearpage
+\subsection{Create a Farmer Account}
+\subsubsection*{Primary Actor:} Farmer
+\subsubsection*{Stakeholders and Interests:}
+1. \emph{Farmer --} wants to create an account, wants to access farming information and research data, wants the process to be clear and simple. \\[10pt]
+2. \emph{ARET --} wants the system to correctly record farmer account creation for accurate data collection.
+\subsubsection*{Preconditions:}
+The mobile application must be built and the API for user creation must be stable.
+
+\subsubsection*{Success Guarantee (Postconditions):}
+The Farmer is aware that their account has been created. The user database is updated. Farmer is able to login and access the mobile application content.
+
+\subsubsection*{Main Success Scenario:}
+1. The user indicates to the System that they would like to create an account.\\
+2. The system verifies that the mobile device is in Malawi to prevent abuse of the System. \emph{[Alt1: Mobile device is not in Malawi]}\\
+3. The system redirects the user to an account creation page where they enter in the required information that they are prompted for, and indicate to the System when they are finished creating an account . The user can choose to cancel the creation process and exit the use case. \emph{[Use Case Ends]}\\
+4. The system validates the new account information and then returns a message to the user that their account has been created. \emph{[Alt2: Account name fails validation][Alt3: Account password fails validation]}\\
+5. The user is redirected to the main application dashboard by the system.
+
+\subsubsection*{Alternative Flows:}
+\emph{Alt1: Mobile device is not in Malawi}\\
+1.  The system informs the user that their location is invalid and are unable to create an account. \\
+2. The system reminds the user to turn on their location services. Use case ends.\\[10pt]
+\emph{Alt2: Account name fails validation}\\
+1. The system informs the user that their account name either already exists or contains invalid characters. \\
+2. Flow resumes at Step 3. \\[10pt]
+\emph{Alt3:  Account password fails validation}\\
+1. The system informs the user that their account password contains invalid characters or does not meet the criteria for a secure password.
+2. Flow resumes at Step 3.
+
+\subsubsection*{Exceptions:}
+If at any time the system is unable to call the API, or the user’s internet connection fails, the system informs the user of the problem, and the use case ends.
+
+\clearpage
+\subsection{Login to a Farmer Account}
+\subsubsection*{Primary Actor:} Farmer
+\subsubsection*{Stakeholders and Interests:}
+1. \emph{Farmer --} wants to login to their account, wants to access farming information and research data, wants the process to be clear and simple. \\[10pt]
+2. \emph{ARET Researcher --} wants accurate lists of farmers registered on the mobile application, wants to filter the list of farmers based on different criteria, wants to be able to send notifications to a list of farmers filtered based on some criteria, wants to know the usage information for the mobile application.
+\subsubsection*{Preconditions:}
+The Farmer has the mobile application installed, and has created an account. The system API is stable.
+
+\subsubsection*{Success Guarantee (Postconditions):}
+The Farmer is logged into their account and able to access the features that being logged in enables.
+
+\subsubsection*{Main Success Scenario:}
+1. The user inputs their account information into the system or chooses to exit the use case \emph{[Use case ends]}.\\
+2. The user indicates to the System that they would like to login or recover a lost account. \emph{[Alt1: Recover account details]}\\
+3. The system verifies that the user's login information is valid. \emph{[Alt2: account name invalid][Alt3: Password is invalid]}\\
+4. The system redirects the user the main landing page of the mobile application.
+
+
+\subsubsection*{Alternative Flows:}
+\emph{Alt1:  Recover account details}\\
+1. The system redirects the user to a password reset landing page.\\
+2. The user inputs their account name and indicates to the system that they would like to reset their account password. \\
+3. The system verifies that the account name is valid, and generates a temporary random password and sends an email to the user notifying them of the change.\\
+4. The system informs the user that their account password has been reset and advises them to check their email for details.\\[10pt]
+\emph{Alt2: Account name is unrecognized}\\
+1. The system informs the user that the account name is not registered in the system.\\
+2. The system refreshes the page and prompts for a registered account name.\\
+3. Flow resumes at Step 1.\\[10pt]
+\emph{Alt3: Password is unrecognized}\\
+1. The system informs the user that the password does not match the account name.\\
+2. Flow resumes at Step 1.
+
+\subsubsection*{Exceptions:}
+If at any time the system is unable to retrieve the user’s account details for validation due to failure of the API or internet connection, the system informs the user of the problem and the use case ends.
+
+\clearpage
+\subsection{View Extended Research Document}
+\subsubsection*{Primary Actor:} Farmer
+\subsubsection*{Stakeholders and Interests:}
+1. \emph{Farmer:} wants to view and download research data, wants to be able to apply information from the research to their farm, wants the process to be clear and simple. \\[10pt]
+2. \emph{ARET Researcher:} wants accurate lists of farmers registered on the mobile application, wants to filter the list of farmers based on different criteria, wants to be able to send notifications to a list of farmers filtered based on some criteria, wants to know the usage information for specific research data.\\[10pt]
+3. \emph{ARET Extension Group:} wants accurate lists of farmers registered on the mobile application, wants to know download and usage metrics for extension materials.
+
+\subsubsection*{Preconditions:}
+Farmer has created an account, has been identified and authenticated by the system. Extension group has posted reasearch files.
+
+\subsubsection*{Success Guarantee (Postconditions):}
+Farmer has viewed desired research and has optionally downloaded the research information onto their device for offline viewing. 
+
+\subsubsection*{Main Success Scenario:}
+1. The user informs the system that they want to view a catalog of all research materials or view already downloaded research materials. \emph{[Alt1: View previously downloaded research materials]}\\
+2. The user searches for the desired crop/farming technique for which they want research information. \emph{[Alt2: No search results found]}\\
+3. The user selects the specific research document from the list of search results.
+4. The system redirects the user to a page outlining the details of the document (File size, Author, Date of Last Update etc.)
+5. The user indicates to the system that they would like to either view the selected document or download it for offline viewing. \emph{[Alt3: Download research document]}\\
+6. The system fetches the document from the ARET database and displays it to the user through the default document viewer on the mobile device.
+
+\subsubsection*{Alternative Flows:}
+\emph{Alt : View previously downloaded research materials}\\
+1. The system redirects the user to a page with a list of all downloaded research files.\\
+2. The user selects a research document they want to view\\
+3. The system displays the research file to the user using their default document viewer.\\[10pt]
+\emph{Alt : No search results found}\\
+1. The system informs the user that no research documents were found that matched their search criteria. Use case ends. \\[10pt]
+\emph{Alt : Download research document}\\
+1. The system fetches the desired document from the ARET database and downloads the file to the default download directory on the mobile device.\\
+2. The system informs the user that the file has been successfully downloaded to the device.
+
+\subsubsection*{Exceptions:}
+If at any time the system is unable to authenticate users or retrieve research documents from the system database due to failure of the system API or the user’s internet connection, the system informs the user of the problem and the use case ends.
 
 \clearpage
 \section{Time Estimation}

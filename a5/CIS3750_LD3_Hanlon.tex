@@ -35,7 +35,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
-\rhead{CIS3750 - Lab Demo 2}
+\rhead{CIS3750 - Lab Demo 3}
 
 % sections should be indexed with alphabets
 \renewcommand{\thesection}{\Alph{section}}
@@ -51,7 +51,7 @@
     \vspace*{\baselineskip}
     \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
     \rule{\textwidth}{0.4pt}\\[1.5\baselineskip]
-    {\LARGE \textsc{Reflections on a Wireframing Session}}\\[\baselineskip]
+    {\LARGE \textsc{Reflections on a Software Prototype}}\\[\baselineskip]
 	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{4pt}    
     \rule{\textwidth}{2pt}\\[2\baselineskip]
    
@@ -63,7 +63,7 @@
     % List of authors in alphabetical order (by last name)
     {\textsc{David DiMaria \\ Braydon Johnson \\ Joshua Lemieux \\ Neivin Mathew \\ Like Zheng} \par}
     \vfill
-    {\scshape November 16, 2016} \\
+    {\scshape November 30, 2016} \\
   \end{titlepage}
   
   
@@ -109,11 +109,11 @@ The User Interface (UI) Designer role is to plan out and develop any user facing
 
 \subsection{Prototyping Session Roles}
 The members of Hanlon were responsible for different aspects of the prototyping session:\\
-1. \textbf{\hspace*{8pt}David DiMaria} - Facilitator\\
+1. \textbf{\hspace*{8pt}David DiMaria} - Mobile Application Facilitator\\
 2. \textbf{\hspace*{8pt}Braydon Johnson} - Observer/Note Taker\\
-3. \textbf{\hspace*{8pt}Joshua Lemieux} - Human Computer\\
-4. \textbf{\hspace*{8pt}Neivin Mathew} - Observer/Note Taker\\
-5. \textbf{\hspace*{8pt}Like Zheng} - Observer/Note Taker
+3. \textbf{\hspace*{8pt}Joshua Lemieux} - Mobile Application Observer\\
+4. \textbf{\hspace*{8pt}Neivin Mathew} - Web Portal Facilitator\\
+5. \textbf{\hspace*{8pt}Like Zheng} - Web Portal Observer
 
 \subsection{Team Organization}
 Hanlon will follow a static team structure. Each member will maintain their respective roles for the entire duration of the project. \par
@@ -125,52 +125,59 @@ In the event of a team member being unavailable, and a majority cannot be establ
 \clearpage
 \section{Client Details and Use Cases}
 \subsection{List of Use Cases}
-Participants of the Paper Prototyping session were presented with the following use cases:\\
+Participants of the were split between the mobile application and the web portal:
+
+\textbf{Mobile Application Use Cases:}\\
 1.\hspace*{8pt} Create a Farmer user account\\
 2.\hspace*{8pt} Login to a Farmer user account\\
-3.\hspace*{8pt} Answer an ARET Survey\\
-4.\hspace*{8pt} Download a Research Article\\
-5.\hspace*{8pt} Add a crop to your list of Crops\\
-6.\hspace*{8pt} Harvest one of your Crops\\
-7.\hspace*{8pt} Delete one of your Crops\\
-8.\hspace*{8pt} Change your name in your User Profile\\
-9.\hspace*{8pt} Change your Account Password\\
-10.\hspace*{3pt} Log out of your Farmer user account
+3.\hspace*{8pt} Add a crop to your list of Crops\\
+4.\hspace*{8pt} Harvest one of your Crops\\
+5.\hspace*{8pt} Delete one of your Crops\\
+6.\hspace*{8pt} Change your name in your User Profile\\
+7.\hspace*{8pt} Change your Account Password\\
 
+\textbf{Web Portal Use Cases:}\\
+1.\hspace*{8pt} Login using the email "admin@aret.com" and the password "pass"\\
+2.\hspace*{8pt} Create a researcher account for yourself\\
+3.\hspace*{8pt} Upload research document\\
+4.\hspace*{8pt} Vet a document that has already been uploaded\\
+5.\hspace*{8pt} Unvet a document that has already been vetted\\
+6.\hspace*{8pt} Download research\\
+7.\hspace*{8pt} Find a farmer by the name of "Leia Leake"\\
+8.\hspace*{8pt} Find all farmers older than 30 that live in Dowa\\
+9.\hspace*{8pt} Remove the location criteria\\
+10.\hspace*{3pt} Get the ARET employee Daenerys Targaryen's email address\\
+11.\hspace*{3pt} Logout from system administrator
 
 \subsection{Participants}
 The prototyping session included the following three participants:\\
 1.\hspace*{8pt} \textbf{Corey Alexander}\\
-Corey is a Teaching Assistant (TA) in his late twenties. He worked through only five of our use cases because he had a lot of feedback to give. He completed use cases 1, 2, 3, 9, and 10. He did have an issue when working through our use cases that involved editing the user's profile. He was confused by some of our button placements and felt there was some inconsistency with the rest of the application. This issue however was specific to the edit name and edit password use cases. Corey appeared to be moderately proficient with computers and was generally familiar with mobile applications.\\[0.5\baselineskip]
-3.\hspace*{8pt} \textbf{Oliver Cook}\\
-Oliver is a Teaching Assistant (TA) in his mid twenties, who is proficient with computers and is not representative of the client. He completed all of the use cases quite rapidly, and generally felt that the wireframe prototype behaved exactly as he expected it to. He was confused by the "Edit Profile" screen, and felt that the application was forcing him to change every single field in his profile.\\[0.5\baselineskip]
-2.\hspace*{8pt} \textbf{Iranaeus Chan}\\
-Iranaeus is an Zoology research student in his mid twenties. He was able to complete every use case except for the last two. He had an issue with the naming of the “Harvest” button in the "Harvest one of your Crops" use case. He felt that the button wasn’t indicative of what the Harvest page is meant for and was misleading. He felt that it meant someone would harvest the crops for him. Iranaeus seemed to be quite proficient with computers and was also familiar with mobile applications and their design.\\[0.5\baselineskip]
+Corey is a Teaching Assistant (TA) in his late twenties. He asked us about our database design and sequence diagrams. Specifically, he wanted to see our tables, and inquired about why our primary keys were automatically incrementing integers. He also wondered how we would deal with holes in our database if we delete users. Regarding sequence diagrams, he asked us to draw a sequence diagram for logging in to the application. For the most part he agreed with the diagram, but wanted to us to break down the objects further.\\[0.5\baselineskip]
+2.\hspace*{8pt} \textbf{Oliver Cook}\\
+Oliver is a Teaching Assistant (TA) in his mid twenties, who is proficient with computers and is not representative of the client. He completed all of the use cases quite rapidly, and generally felt that the web portal prototype behaved exactly as he expected it to. He asked us about the API documentation and our technology stack.\\[0.5\baselineskip]
+3.\hspace*{8pt} \textbf{Devin}\\
+Devin is a Teaching Assistant (TA) in his mid twenties. He seemed to have a solid understanding of computer science related topics. He did not work through any of the use cases, but talked to the team about the deisgn and structure of the API. He asked us about our technology stack, inquired about security concerns with the API, and how we dealt with accommodating for the requirements of the mobile and web team simultaneously. \\[0.5\baselineskip]
 
 \clearpage
 \section{Things That Worked}
-Overall, the response to our wireframe was overwhelmingly positive. It was difficult to evaluate exactly what elements of our design worked well since participants would not notice things that were as they expected. Thus, we can assume that any element of the design that the participants did not have trouble with was well designed and behaved in a way that was expected. However, we received many comments about how intuitive many of the use cases were to accomplish. All of our participants went through most use cases without any help or difficulty.\par 
-All participants thought that the process of login, and account creation went exactly as they expected. They felt that the process was straightforward, and agreed that the flow was intuitive. Upon reaching the home screen, all participants were able to recognize the menu bar at the bottom of their screen and identified it as the primary means of navigating through the application. There was no confusion of how to navigate the menu bar with a few changes made to the appearance of the menu bar. \par
-The process of adding new crops to the list of the user's currently growing crops seemed to be well received by all the participants. Most participants felt the add button occupied the same section of the screen that they expected it to be in and were able to successfully search for a new crop and add it to their growing crops without any hassles.\par
-All participants agreed that new surveys available to them on their home screen were appropriately positioned and visible enough to catch their attention without being obtrusive to other application functionality. Participants also found the ability to answer a survey simple and intuitive. \par
+Overall, the response to our API (Application Programming Interface) was overwhelmingly positive. Participants thought that our API provided a proper back-end for the mobile and web teams to implement. The design of the API made sense to the participants after our team explained the design. It was difficult to accurately analyze what elements of our framework worked well, since some of the functionality that our API provided was not implemented in either the mobile application or the web portal.\par
+The API provided multiple endpoints for each database table and served JSON responses over HTTPS (Hypertext Transfer Protocol Secure) for the mobile application and the web portal. The API was capable of querying the tables based on some criteria, and allowed for login, creation and updating of user accounts.\par
+Our documentation was easily understood by the participants. They were able to quickly read over an API request and understand its functionality. The participants were also shown our database schema and quickly understood the system's design.\par
+Going through the use cases with the mobile and web team, it was clear that our API was providing the required responses for the login/create account process for all user types, loading crop information, and creating and updating Farmer records.\par
 
 \clearpage
 \section{Things to Improve}
-Although most participants were able to easily navigate through the system without much trouble, there were some aspects of the design that were found wanting.\par
-One of our participants wanted a header bar for the Login screen. Currently there is no indication at the top of the page that the user is on the sign-in screen. This can be easily implemented in a future release by adding a header bar that is consistent with the rest of the application.\par
-All our participants were able to successfully change their password, but were not provided with any feedback indicating whether their password was changed successfully or not. The user did not have any information as to whether the application had done what they had wanted it to do or not. Adding a pop-up notification that informs the user of this would easily resolve this issue.\par
- 	One participant was confused about the edit profile page. They felt like the page required the user to change everything in their profile instead of a single field. In the final version of the app the profile screen will auto populate the fields to indicate that you do not have to edit all fields to make a change.\par
-	Another participant felt like the change password button was misleading. They felt like it looked like a submit button and was placed where a submit button would be placed. For future releases we will change the button to be a text link to avoid confusion.\par
-
+Although most participants found the system to be adequately functional, there were some aspects of the design that were found wanting.\par
+One of our participants suggested a different approach in our database design for users. Our users were split into two tables -- Farmers and ARET Employees, which decreased the maintainability of our platform. A better way to implement the same functionality would be to have a primary User table, and then have the Farmer and ARET employees table point foreign keys to the Users table. This would make our design more extensible and allow us to easily integrate additional user types.\par
+Another participant noticed we did not have code in place for the file uploading portion of our application. The web portal needs the ability to upload and download research documents and the mobile application needs to to be able to download research documents as well. This is a core piece functionality in our application, and would need to be improved upon to make our backend more complete.\par
+A common request from most participants was the idea of a farmer history. Currently when you query for a list of farmers, it does not include their harvest history data. To improve this functionality, we would include the harvest history in the response.\par
 
 \clearpage
 \section{Looking to the Future}
 Throughout the prototyping session, the participants made a number of suggestions about improvements that they would like to see to some features of the application. Some also wished that there were additional features for certain parts of the application.\par	
-One participant thought it would be useful to have a harvest history within the harvest page. This is something that we are going to put in the final application, with a “last time harvested” label when you view each crop you’re growing. We also plan on putting a full crop history in the profile tab, with each crop you add, deleted or harvested.\par
-	Some users felt that the buttons and interface may have been difficult to see for colourblind users. Our colour scheme had a contrast ratio of 4:1, just missing the recommended 4.5:1 contrast ratio. We do not have a final colour scheme, and this is something we would take into consideration in our final design.Simply using a slightly darker version of the green we had chosen, would fix this issue instantly.\par
-	One user did not like the fact that the crop was added when clicking on a crop that you have searched for. They felt like when tapping on the crop a page should pop up with more information about that crop. This is a change we would like to make in the future. When tapping on a crop a page will open up that will show more information about that crop as well as a add and cancel button. This will allows users to get information about a crop before adding it.\par
-Some users felt a bit lost with all the different screens that were available to them and wished that there was something to guide them within the application itself. The addition of a tutorial section which would execute for the first run of the application would resolve this issue and would not be difficult to maintain or implement. It would also vastly improve the usability of the application.\par
-Some users wished that there was a better way to sort the research articles displayed within the research section of the application. They felt that simply searching for keywords within articles was not enough and wanted a way to browse through the articles without knowing what they were looking for. Adding functionality to browse through research articles by date, tags, category, author, or crop would help resolve this need. Allowing users to see what research articles have been viewed the most or used the most would also help them choose which article would be helpful to them. This functionality would not be difficult to implement as it would require fetching slightly more specific data and would also be straightforward to maintain.\par
+In a future version of our API we would like to add a system to allow the ARET employees to send messages/notifications to farmers. We would create a database table to upload messages that are specific to a set of farmers (region, crop they are growing, etc.), and also implement a system to send push notifications to the mobile application.\par
+One of the participants noticed that we had the option to upload and download research documents, which had not been implemented for the prototyping session. Since we did not get to implement hosting and retrieving files in our API, we would need to allow certain users to be able to upload files to a web server and have a database table containing information on the file (size, link, author).\par
+Another participant had some concerns about the security of our system. Currently the only security measures implemented in our system is that of hashing account passwords on the server. However, this is only done once the API has received the plain text passwords. In the future we would decide on a hashing algorithm across all the teams, and the hashing and authentication would be done on both ends. Additionally, there is no security around the API itself, so anyone with the URL can access it. In the future, we would implement a token authentication to prevent unauthorized use of the API.\par
 
 \clearpage
 \section{Individual Contributions}

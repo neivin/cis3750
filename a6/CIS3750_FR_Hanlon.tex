@@ -35,7 +35,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
-\rhead{CIS3750 - Lab Demo 3}
+\rhead{CIS3750 Final Report}
 
 % sections should be indexed with alphabets
 \renewcommand{\thesection}{\Alph{section}}
@@ -43,7 +43,7 @@
 %double spaced lines in the whole document
 \doublespacing
 
-\title{Assignment 1}
+\title{Final Report}
 
 \begin{document}
 \begin{titlepage}
@@ -63,7 +63,7 @@
     % List of authors in alphabetical order (by last name)
     {\textsc{David DiMaria \\ Braydon Johnson \\ Joshua Lemieux \\ Neivin Mathew \\ Like Zheng} \par}
     \vfill
-    {\scshape November 30, 2016} \\
+    {\scshape December 5, 2016} \\
   \end{titlepage}
   
   
@@ -75,102 +75,9 @@
 \pagenumbering{arabic} %pagenumbering in arabic numbers
     
 \clearpage
-\section{Final Prototyping Session}
+\section{Video}
 The Final Prototyping Session was completed on November 23, 2016 during the scheduled lab time.
-\section{Team Details}
-\subsection{Team Name}
-The team name for the project is "Hanlon."\par
-The name is inspired by the eponymous highway that runs through the city of Guelph, and signifies the team's ties to the University of Guelph, and its beautiful city.\\
 
-\begin{figure}[H]
-	\centering	
-	\includegraphics[height=2in]{img/hanlon-logo.png}
-	%\caption{The team logo}
-	\label{fig:kitten}
-\end{figure}
-
-\subsection{Team Members}
-Hanlon is comprised of the following students:\\
-1. \textbf{\hspace*{8pt}David DiMaria} - Project Manager\\
-2. \textbf{\hspace*{8pt}Braydon Johnson} - Software Developer, User Interface Designer\\
-3. \textbf{\hspace*{8pt}Joshua Lemieux} - Project Manager, User Interface Designer\\
-4. \textbf{\hspace*{8pt}Neivin Mathew} - Software Developer, User Interface Designer\\
-5. \textbf{\hspace*{8pt}Like Zheng} - Software Developer
-
-\subsection{Team Roles}
-\subsubsection*{Project Manager}
-The Project Manager predicts potential problems that may arise during development, and plans tasks to ensure that the project is completed successfully and on time. This role involves the scheduling and unblocking of tasks. It may also involve some programming.
-
-\subsubsection*{Software Developer}
-The Developer is involved in all aspects of the software development process including research, design, coding, documentation and testing.
-
-\subsubsection*{User Interface Designer}
-The User Interface (UI) Designer role is to plan out and develop any user facing component of the system which includes the specific layout of screens, and improving the interaction between the customer and the product.
-
-\subsection{Prototyping Session Roles}
-The members of Hanlon were responsible for different aspects of the prototyping session:\\
-1. \textbf{\hspace*{8pt}David DiMaria} - Mobile Application Facilitator\\
-2. \textbf{\hspace*{8pt}Braydon Johnson} - Observer/Note Taker\\
-3. \textbf{\hspace*{8pt}Joshua Lemieux} - Mobile Application Observer\\
-4. \textbf{\hspace*{8pt}Neivin Mathew} - Web Portal Facilitator\\
-5. \textbf{\hspace*{8pt}Like Zheng} - Web Portal Observer
-
-\subsection{Team Organization}
-Hanlon will follow a static team structure. Each member will maintain their respective roles for the entire duration of the project. \par
-
-Hanlon will use a democratic majority voting system for any decisions that need to be taken within the team. Each present member will be involved in voting, and possesses one vote per motion. A motion is passed when a simple majority is achieved. \par
-
-In the event of a team member being unavailable, and a majority cannot be established, a motion can only be passed through unanimous consent.
-
-\clearpage
-\section{Client Details and Use Cases}
-\subsection{List of Use Cases}
-Participants of the were split between the mobile application and the web portal:
-
-\textbf{Mobile Application Use Cases:}\\
-1.\hspace*{8pt} Create a Farmer user account\\
-2.\hspace*{8pt} Login to a Farmer user account\\
-3.\hspace*{8pt} Add a crop to your list of Crops\\
-4.\hspace*{8pt} Harvest one of your Crops\\
-5.\hspace*{8pt} Delete one of your Crops\\
-6.\hspace*{8pt} Change your name in your User Profile\\
-7.\hspace*{8pt} Change your Account Password\\
-
-\textbf{Web Portal Use Cases:}\\
-1.\hspace*{8pt} Login using the email "admin@aret.com" and the password "pass"\\
-2.\hspace*{8pt} Create a researcher account for yourself\\
-3.\hspace*{8pt} Upload research document\\
-4.\hspace*{8pt} Vet a document that has already been uploaded\\
-5.\hspace*{8pt} Unvet a document that has already been vetted\\
-6.\hspace*{8pt} Download research\\
-7.\hspace*{8pt} Find a farmer by the name of "Leia Leake"\\
-8.\hspace*{8pt} Find all farmers older than 30 that live in Dowa\\
-9.\hspace*{8pt} Remove the location criteria\\
-10.\hspace*{3pt} Get the ARET employee Daenerys Targaryen's email address\\
-11.\hspace*{3pt} Logout from system administrator
-
-\subsection{Participants}
-The prototyping session included the following three participants:\\
-1.\hspace*{8pt} \textbf{Corey Alexander}\\
-Corey is a Teaching Assistant (TA) in his late twenties. He asked us about our database design and sequence diagrams. Specifically, he wanted to see our tables, and inquired about why our primary keys were automatically incrementing integers. He also wondered how we would deal with holes in our database if we delete users. Regarding sequence diagrams, he asked us to draw a sequence diagram for logging in to the application. For the most part he agreed with the diagram, but wanted to us to break down the objects further.\\[0.5\baselineskip]
-2.\hspace*{8pt} \textbf{Oliver Cook}\\
-Oliver is a Teaching Assistant (TA) in his mid twenties, who is proficient with computers and is not representative of the client. He completed all of the use cases quite rapidly, and generally felt that the web portal prototype behaved exactly as he expected it to. He asked us about the API documentation and our technology stack.\\[0.5\baselineskip]
-3.\hspace*{8pt} \textbf{Devin}\\
-Devin is a Teaching Assistant (TA) in his mid twenties. He seemed to have a solid understanding of computer science related topics. He did not work through any of the use cases, but talked to the team about the deisgn and structure of the API. He asked us about our technology stack, inquired about security concerns with the API, and how we dealt with accommodating for the requirements of the mobile and web team simultaneously. \\[0.5\baselineskip]
-
-\clearpage
-\section{Things That Worked}
-Overall, the response to our API (Application Programming Interface) was overwhelmingly positive. Participants thought that our API provided a proper back-end for the mobile and web teams to implement. The design of the API made sense to the participants after our team explained the design. It was difficult to accurately analyze what elements of our framework worked well, since some of the functionality that our API provided was not implemented in either the mobile application or the web portal.\par
-The API provided multiple endpoints for each database table and served JSON responses over HTTPS (Hypertext Transfer Protocol Secure) for the mobile application and the web portal. The API was capable of querying the tables based on some criteria, and allowed for login, creation and updating of user accounts.\par
-Our documentation was easily understood by the participants. They were able to quickly read over an API request and understand its functionality. The participants were also shown our database schema and quickly understood the system's design.\par
-Going through the use cases with the mobile and web team, it was clear that our API was providing the required responses for the login/create account process for all user types, loading crop information, and creating and updating Farmer records.\par
-
-\clearpage
-\section{Things to Improve}
-Although most participants found the system to be adequately functional, there were some aspects of the design that were found wanting.\par
-One of our participants suggested a different approach in our database design for users. Our users were split into two tables -- Farmers and ARET Employees, which decreased the maintainability of our platform. A better way to implement the same functionality would be to have a primary User table, and then have the Farmer and ARET employees table point foreign keys to the Users table. This would make our design more extensible and allow us to easily integrate additional user types.\par
-Another participant noticed we did not have code in place for the file uploading portion of our application. The web portal needs the ability to upload and download research documents and the mobile application needs to to be able to download research documents as well. This is a core piece functionality in our application, and would need to be improved upon to make our backend more complete.\par
-A common request from most participants was the idea of a farmer history. Currently when you query for a list of farmers, it does not include their harvest history data. To improve this functionality, we would include the harvest history in the response.\par
 
 \clearpage
 \section{Looking to the Future}

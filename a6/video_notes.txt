@@ -1,0 +1,20 @@
+INTRODUCTION
+
+Malawi is a country located in the warm heart of Africa, with a population of 16.4 million. An estimated 2.83 million people will experience food insecurity during the year.
+
+The economy of the country is based on agriculture. The majority of the people in Malawi are farmers who cultivate tobacco for living. Due to the impact of climate change, decline in global tobacco consumption and the scarcity of food in Malawi, the farmers need to transition to growing different crops. 
+
+However, since Malawian farmers have been growing tobacco for so long, they lack the tools and knowledge required to grow other crops.
+
+For our Systems Analysis and Design course, we were tasked with building a software system to support the Agricultural Research and Extension Trust (ARET) of Malawi. They are the premier research institution of Malawi, and are responsible for conducting research and providing technical services on tobacco. 
+
+ARET's vision is to be a centre of excellence in agricultural research and technology dissemination which promotes diversification in the agricultural sector.
+
+To accomplish this, they require a system to collect data on the farmers in Malawi, and distribute research conducted within the organization to the farmers of the country. 
+
+Our project aims to fulfill this need.
+
+
+SPECIFIC SOLUTION
+
+
